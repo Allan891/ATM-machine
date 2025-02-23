@@ -1,19 +1,26 @@
 ATM Machine in Prolog (DD1351 - Logic for Computer Scientists)
 
 Model Checking for CTL
-The main puspose of this project is to explore model-checking techniques for Computational Tree Logic (CTL) and implement a proof system tailored for CTL formulas. Model checking is used to verify CTL formulas and is implemented here recursively, while addressing challenges posed by loops in the model, which are critical for ensuring termination.
 
-The development process consisted of three main steps:
+The main purpose of this assignment is exploring (model checking) techniques for computational tree logic (CTL), and implementing a proof system tailored for CTL formulas. Model checking is used for verification of CTL formulas and is here implemented recursively while addressing the challenges posed by loops within the model, which is critical for ensuring termination.
+
+The approach to this assignment has three steps: 
+
 1. Understanding the system.
-2. Implementing the system.
-3. Validating its functionality through different scenarios.
 
-Initially, the simplest possible case was tested by implementing literal evaluations, checking whether a given start node possessed a specific property.
-In the second step, each successor rule was implemented and tested individually in different scenarios by writing simple models and assertions.
-The final step in model checking development involved testing more complex nested rules and running the accompanying test cases. A copy of the model checker was created to log each rule that the model deemed true when evaluating a given assertion. This debugging method was useful for isolating errors whenever the program produced incorrect results or became unresponsive. The solution was then refined by testing it against various similar scenarios.
+2. Implementing the system.
+
+3. Validating its functionality through different scenarios. 
+
+
+I started out by making a skeleton version of the program that could handle the easiest possible case by implementing the literals and checking whether a given start node had a specific property or not.
+
+Step two was implementing every subsequent rule and testing them separately in different scenarios by writing simple models and statements. 
+
+The final step of the model checker development was testing with more complicated statements nesting multiple rules and running through the provided test suite. We made a copy of our model checker that would write out every rule the model judged as being true while testing a statement and used it if the program gave a incorrect answer or froze on a test file to isolate the problem. Then we ran the updated solution through various similar scenarios.
+
 
 Model
-The model consists of 12 states, representing a simplified version of an ATM machine. The states and properties are named in a way that makes them self-explanatory.
-The model illustrates the various states required to access an account, allowing users to either view their balance or withdraw money. It also accounts for cases where a withdrawal is denied and includes branches that handle scenarios involving incorrect PIN entries, showing the possible state transitions in such cases.
+Our model consists of 12 states and represents a simplified version of a ATM-machine. The states and properties are named in a way that makes them pretty self-explanatory. In short the model shows the different states in accessing a account and either displaying the account balance or withdrawing money. It does also account for the possibility of the withdrawal being denied as well as having a branch for showing the different states and possible transitions in the eventuality of a incorrect pin being entered.
 
-The file ATM-machine.prolog is included the for this project.
+The file ATM-machine.prolog include the code for this project.
