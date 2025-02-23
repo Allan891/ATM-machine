@@ -1,16 +1,17 @@
-# ATM-machine
-ATM machine code in Prolog
+ATM Machine in Prolog (DD1351 - Logic for Computer Scientists)
 
-Kortfattad om mig.
+Model Checking for CTL
+The main puspose of this project is to explore model-checking techniques for Computational Tree Logic (CTL) and implement a proof system tailored for CTL formulas. Model checking is used to verify CTL formulas and is implemented here recursively, while addressing challenges posed by loops in the model, which are critical for ensuring termination.
 
-Civilingenjörsstudent i Informationsteknik vid KTH med bakgrund som elmontör, gruppledare och trafikledare. Då, smalat jag erfarenhet av kundbemötande, ledarskap och teamarbete. Jag är noggrann, ansvarstagande och trivs i sociala och serviceinriktade. Engagerad, analytisk och gillar utmaningar. Språk förmågan, kan jag båda svenska och engelska, både i tal och skrift.
+The development process consisted of three main steps:
+1. Understanding the system.
+2. Implementing the system.
+3. Validating its functionality through different scenarios.
 
-DD1351 Logik för dataloger.
+Initially, the simplest possible case was tested by implementing literal evaluations, checking whether a given start node possessed a specific property.
+In the second step, each successor rule was implemented and tested individually in different scenarios by writing simple models and assertions.
+The final step in model checking development involved testing more complex nested rules and running the accompanying test cases. A copy of the model checker was created to log each rule that the model deemed true when evaluating a given assertion. This debugging method was useful for isolating errors whenever the program produced incorrect results or became unresponsive. The solution was then refined by testing it against various similar scenarios.
 
-Modellprovning för CTL.
-
-Huvudsyftet är att utforska (modellkontroll) tekniker för computational tree logic (CTL), och implementera ett bevissystem skräddarsytt för CTL-formler. Modellkontroll används för verifiering av CTL-formler och implementeras här rekursivt samtidigt som man tar med de utmaningar som loopar i modellen utgör, vilket är avgörande för att säkerställa avslutning. Jag hade tre steg för att bygga vår modell. Förstå systemet, implementera systemet och validera dess funktionalitet genom olika scenarier. I början testade jag det enklaste möjliga fallet genom att implementera de bokstavliga och kontrollera om en given start noden hade en specifik egenskap eller inte. Steg två var att implementera varje efterföljande regel och testa dem separat i olika scenarier genom att skriva enkla modeller och påståenden. Det sista steget i utvecklingen av modellkontrollen var att testa med mer komplicerade nästed flera regler och körde igenom den medföljande testen. Jag gjorde en kopia av vår modellcheckare som skulle skriva ut varje regel som modellen bedömde vara sant när ett påstående testades och använde det om programmet gav ett felaktigt svar eller frös på en testfil för att isolera problemet. Sedan jag uppdaterade lösningen genom olika liknande scenarier.
-
-Modell
-
-Min modell består av 12 tillstånd. Den representerar en förenklad version av en bankomat. Tillstånden och fastigheterna är namngivna på ett sätt som gör dem ganska självförklarande. Kortfattat visar modellen de olika tillstånden för att komma åt ett konto och antingen visa kontosaldot eller ta ut pengar. Det tar också hänsyn till möjligheten att uttaget nekas samt att det finns en gren för att visa de olika tillstånden och möjliga övergångar i händelse av att en felaktig pinkod skrivs in.
+Model
+The model consists of 12 states, representing a simplified version of an ATM machine. The states and properties are named in a way that makes them self-explanatory.
+The model illustrates the various states required to access an account, allowing users to either view their balance or withdraw money. It also accounts for cases where a withdrawal is denied and includes branches that handle scenarios involving incorrect PIN entries, showing the possible state transitions in such cases.
