@@ -15,3 +15,5 @@ The final step in model checking development involved testing more complex neste
 Model
 The model consists of 12 states, representing a simplified version of an ATM machine. The states and properties are named in a way that makes them self-explanatory.
 The model illustrates the various states required to access an account, allowing users to either view their balance or withdraw money. It also accounts for cases where a withdrawal is denied and includes branches that handle scenarios involving incorrect PIN entries, showing the possible state transitions in such cases.
+
+The file ATM-machine.prolog is included the for this project.
