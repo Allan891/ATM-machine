@@ -21,6 +21,7 @@ The final step of the model checker development was testing with more complicate
 
 
 Model
+
 Our model consists of 12 states and represents a simplified version of a ATM-machine. The states and properties are named in a way that makes them pretty self-explanatory. In short the model shows the different states in accessing a account and either displaying the account balance or withdrawing money. It does also account for the possibility of the withdrawal being denied as well as having a branch for showing the different states and possible transitions in the eventuality of a incorrect pin being entered.
 
 The file ATM-machine.prolog include the code for this project.
